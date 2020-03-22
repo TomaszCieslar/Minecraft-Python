@@ -3,3 +3,5 @@ from minecraft import blocks
 
 print('test')
 print('test2')
+print('test3')
+
