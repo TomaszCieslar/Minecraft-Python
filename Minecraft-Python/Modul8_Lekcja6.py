@@ -11,7 +11,7 @@ elif odpowiedz == 2:
 elif odpowiedz == 3:
     mc.player.setPos(67,787,23)
 elif odpowiedz == 4:
-    mc.player.setPos(678,12,890)
+    mc.player.setPos(678,100,0)
 else:
     mc.postToChat('Nie ma takiego miejsca')
 

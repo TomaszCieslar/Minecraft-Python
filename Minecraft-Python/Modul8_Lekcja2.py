@@ -2,11 +2,12 @@ from mcpi.minecraft import Minecraft
 
 mc = Minecraft.create()
 
-haslo = 'Moje tajemne haslo'
+haslo = 'Moje tajemnicze haslo'
 
-odpowiedz = input('Podaj haslo dostępu')
+odpowiedz = input('Podaj haslo dostepu: ')
+print('Twoja odpowiedz to: ' +odpowiedz)
 
 if odpowiedz == haslo:
-    mc.postToChat('To jest wlasciwa odpowiedz')
+    mc.postToChat('Twoja odpowiedz jest prawidlowa')
 
-mc.postToChat('koniec dzialania programu')
+mc.postToChat(odpowiedz)

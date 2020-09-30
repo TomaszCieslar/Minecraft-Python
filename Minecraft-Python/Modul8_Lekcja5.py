@@ -2,15 +2,18 @@ from mcpi.minecraft import Minecraft
 
 mc = Minecraft.create()
 
-odpowiedz = int(input('Wprowadz liczbe kaktusow'))
+odpowiedz = int(input('Wprowadz liczbe kaktusow: '))
 
-if odpowiedz > 20 :
+
+if odpowiedz > 20:
     mc.postToChat('Bardzo duzo kaktusow')
-elif odpowiedz > 5:
+elif odpowiedz < 5:
     mc.postToChat('Malo kaktusow')
 elif odpowiedz == 0:
-    mc.postToChat('Brak katusow')
+    mc.postToChat('Brak kaktusow')
 else:
-    mc.postToChat('Ta liczba jest chyba niewlasciwa')
+    mc.postToChat('Ta liczba jest chyba nieprawidlowa')
 
-mc.postToChat('koniec dzialania programu')
+print(odpowiedz)
+mc.postToChat(odpowiedz)
+
