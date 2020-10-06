@@ -2,9 +2,9 @@ from mcpi.minecraft import Minecraft
 
 mc = Minecraft.create()
 
-odpowiedz = int(input('Wprowadz miejsce'))
+odpowiedz = int(input('Wprowadz miejsce: '))
 
-if odpowiedz == 1 :
+if odpowiedz == 1:
     mc.player.setPos(123,345,23)
 elif odpowiedz == 2:
     mc.player.setPos(34,56,122)
@@ -15,4 +15,4 @@ elif odpowiedz == 4:
 else:
     mc.postToChat('Nie ma takiego miejsca')
 
-mc.postToChat('koniec dzialania programu')
+mc.postToChat('Koniec dzialania programu')

@@ -1,21 +1,25 @@
 from mcpi.minecraft import Minecraft
 mc = Minecraft.create()
 
-shwrX = 0
-shwrY = 0
-shwrZ = 0
-width = 5
-height = 5
-length = 5
+szerokosc = 5
+wysokosc = 5
+dlugosc = 5
 
-pos = mc.player.getTilePos()
-x = pos.x
-y = pos.y
-z = pos.z
+startX = 227
+startY = 66
+startZ = 201
 
-if shwrX <= x < shwrX + width:
-    mc.setBlocks(shwrX, shwrY + height, shwrZ,
-                 shwrX + width, shwrY + height, shwrZ + length, 8)
+pozycja = mc.player.getTilePos()
+
+x = pozycja.x 
+y = pozycja.y 
+z = pozycja.z 
+
+if startX <= x < startX + szerokosc:
+    mc.setBlocks(startX, startY + wysokosc, startZ,
+                    startX+szerokosc, startY+wysokosc, startZ+dlugosc,8)
 else:
-    mc.setBlocks(shwrX, shwrY + height, shwrZ,
-                shwrX + width, shwrY + height, shwrZ + length, 0)
+        mc.setBlocks(startX, startY + wysokosc, startZ,
+                    startX+szerokosc, startY+wysokosc, startZ+dlugosc,0)
+
+mc.postToChat('koniec gry') 
